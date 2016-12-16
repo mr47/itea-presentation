@@ -1,0 +1,6 @@
+
+$(".input-prepend > label, .swTableFilters-search +").css("color", "red");
+
+$(".input-prepend").click(function(){
+	$(this).fadeOut("fast");
+});
