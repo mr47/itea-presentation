@@ -353,6 +353,20 @@ su pi -c 'node /home/pi/app.js < /dev/null &'`}
                         <Image src={images.gpio.replace("/", "")} height="500px"/>
                     </Slide>
 
+                    <Slide transition={["slide"]} bgImage={images.flash.replace("/", "")} bgDarken={0.75}>
+                        <BlockQuote>
+                            <Quote>I am the faster man alive.</Quote>
+                            <Cite>«The Flash»</Cite>
+                        </BlockQuote>
+                    </Slide>
+
+                    <Slide transition={["slide"]} bgImage={images.city2.replace("/", "")} bgDarken={0.75}>
+                        <BlockQuote>
+                            <Quote>Modern technology is magic.</Quote>
+                            <Cite>«Современные техноглогии похожи на магию.»</Cite>
+                        </BlockQuote>
+                    </Slide>
+
                     <Slide transition={["slide","fade"]} bgColor="secondary" textColor="primary">
                         <List>
                             <Appear><ListItem>Следите за трендами, а не следуйте</ListItem></Appear>
@@ -360,6 +374,23 @@ su pi -c 'node /home/pi/app.js < /dev/null &'`}
                             <Appear><ListItem>Отдыхайте</ListItem></Appear>
                             <Appear><ListItem>Курсы хороший способ начать</ListItem></Appear>
                             <Appear><ListItem>KISS</ListItem></Appear>
+                        </List>
+                    </Slide>
+
+                    <Slide transition={["slide"]} bgColor="white">
+                        <List>
+                            <ListItem>
+                                <Link href="https://github.com/mr47/itea-presentation">Presentation Github</Link>
+                            </ListItem>
+                            <ListItem>
+                                <Link href="https://github.com/mr47">Github @ mr47</Link>
+                            </ListItem>
+                            <ListItem>
+                                <Link href="http://weworkweplay.com/play/raspberry-pi-nodejs/">Node.js + Raspberry PI</Link>
+                            </ListItem>
+                            <ListItem>
+                                <Link href="https://flowtype.org/">Flow</Link>
+                            </ListItem>
                         </List>
                     </Slide>
 
