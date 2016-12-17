@@ -46,7 +46,8 @@ const images = {
     smash: require("../assets/building-up-tearing-down_500x400.png"),
     oneComponent: require("../assets/6e55696340d29634cae64f5c544e0e70.jpg"),
     reactNative: require("../assets/react-native-example.jpg"),
-    nativeScript: require("../assets/cross-platform-rendering-angular.png")
+    nativeScript: require("../assets/cross-platform-rendering-angular.png"),
+    uxGif: require("../assets/image_2928.gif")
 };
 
 preloader(images);
@@ -194,22 +195,6 @@ export default class Presentation extends React.Component {
                         </BlockQuote>
                     </Slide>
 
-                    <Slide transition={["zoom", "fade"]} bgColor="primary">
-                        <Heading caps fit>Flexible Layouts</Heading>
-                        <Layout>
-                            <Fill>
-                                <Heading size={4} caps textColor="primary" bgColor="white" margin={10}>
-                                    FLEX
-                                </Heading>
-                            </Fill>
-                            <Fill>
-                                <Heading size={4} caps textColor="primary" bgColor="white" margin={10}>
-                                    GRID
-                                </Heading>
-                            </Fill>
-                        </Layout>
-                    </Slide>
-
                     <Slide transition={["slide"]} bgColor="black">
                         <BlockQuote>
                             <Quote>Реакт это jQuery 2007?</Quote>
@@ -239,6 +224,22 @@ export default class Presentation extends React.Component {
                         />
                     </Slide>
 
+                    <Slide transition={["zoom", "fade"]} bgColor="primary">
+                        <Heading caps fit>Flexible Layouts</Heading>
+                        <Layout>
+                            <Fill>
+                                <Heading size={4} caps textColor="primary" bgColor="white" margin={10}>
+                                    FLEX
+                                </Heading>
+                            </Fill>
+                            <Fill>
+                                <Heading size={4} caps textColor="primary" bgColor="white" margin={10}>
+                                    GRID
+                                </Heading>
+                            </Fill>
+                        </Layout>
+                    </Slide>
+
                     <Slide transition={["slide"]} bgColor="black">
                         <BlockQuote>
                             <Quote>Keep it simple, stupid</Quote>
@@ -259,6 +260,17 @@ export default class Presentation extends React.Component {
 
                     <Slide transition={["slide"]} bgColor="white">
                         <Image src={images.oneComponent.replace("/", "")} margin="0px auto 40px" height="400px"/>
+                    </Slide>
+
+                    <Slide transition={["slide"]} bgColor="black">
+                        <BlockQuote>
+                            <Quote>UI/UX become is more and more important</Quote>
+                            <Cite>«UI / UX становятся все более и более важным»</Cite>
+                        </BlockQuote>
+                    </Slide>
+
+                    <Slide transition={["slide"]} bgColor="white">
+                        <Image src={images.uxGif.replace("/", "")} margin="0px auto 40px" height="400px"/>
                     </Slide>
 
                     <Slide transition={["slide"]} bgColor="primary">
@@ -283,7 +295,7 @@ export default class Presentation extends React.Component {
                             <Appear><ListItem>Следите за трендами, а не следуйте</ListItem></Appear>
                             <Appear><ListItem>Изучайте больше</ListItem></Appear>
                             <Appear><ListItem>Отдыхайте</ListItem></Appear>
-                            <Appear><ListItem>Курсы хороший способ научиться</ListItem></Appear>
+                            <Appear><ListItem>Курсы хороший способ начать</ListItem></Appear>
                             <Appear><ListItem>KISS</ListItem></Appear>
                         </List>
                     </Slide>
@@ -291,6 +303,7 @@ export default class Presentation extends React.Component {
                     <Slide transition={["zoom", "slide"]} bgColor="black">
                         <Link href="http://itea.ua"><Image width="100%" src={images.iteaLogo}/></Link>
                     </Slide>
+
                 </Deck>
             </Spectacle>
         );
