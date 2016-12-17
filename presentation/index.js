@@ -51,7 +51,8 @@ const images = {
     gpio: require("../assets/gpio-screen.png"),
     speed0: require("../assets/speed-test-0.png"),
     speed1: require("../assets/speed-test-1.png"),
-    flash: require("../assets/flash.jpg")
+    flash: require("../assets/flash.jpg"),
+    codebase: require("../assets/codebase.jpg")
 };
 
 preloader(images);
@@ -253,6 +254,13 @@ export default class Presentation extends React.Component {
 
                     <Slide transition={["slide"]} bgColor="white">
                         <Image src={images.smash.replace("/", "")} margin="0px auto 40px" height="400px"/>
+                    </Slide>
+
+                    <Slide transition={["slide"]} bgImage={images.codebase.replace("/", "")} bgDarken={0.75}>
+                        <BlockQuote>
+                            <Quote>Codebase that smells</Quote>
+                            <Cite>«хорошая кодовая база»</Cite>
+                        </BlockQuote>
                     </Slide>
 
                     <Slide transition={["slide"]} bgColor="black">
