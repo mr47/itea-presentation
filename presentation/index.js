@@ -40,14 +40,18 @@ const images = {
     city2: require("../assets/anders-lq.jpg"),
     logo: require("../assets/itea-logo.png"),
     mr47Logo: require("../assets/mr47.png"),
-    markdown: require("../assets/markdown.png"),
     iteaLogo: require("../assets/itea-logo.png"),
     github: require("../assets/mr47-github.png"),
     smash: require("../assets/building-up-tearing-down_500x400.png"),
     oneComponent: require("../assets/6e55696340d29634cae64f5c544e0e70.jpg"),
     reactNative: require("../assets/react-native-example.jpg"),
     nativeScript: require("../assets/cross-platform-rendering-angular.png"),
-    uxGif: require("../assets/image_2928.gif")
+    uxGif: require("../assets/image_2928.gif"),
+    raspberryPi: require("../assets/vooruit100_013_moneyshot_001-1.jpg"),
+    gpio: require("../assets/gpio-screen.png"),
+    speed0: require("../assets/speed-test-0.png"),
+    speed1: require("../assets/speed-test-1.png"),
+    flash: require("../assets/flash.jpg")
 };
 
 preloader(images);
@@ -140,7 +144,7 @@ export default class Presentation extends React.Component {
                     <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
                         <List>
                             <Appear>
-                                <Heading size={4} capss textColor="third">
+                                <Heading size={4} caps textColor="black">
                                     Frameworks:
                                 </Heading>
                             </Appear>
@@ -156,7 +160,7 @@ export default class Presentation extends React.Component {
                         </List>
                         <List>
                             <Appear>
-                                <Heading size={4} caps textColor="third">
+                                <Heading size={4} caps textColor="black">
                                     JavaScript:
                                 </Heading>
                             </Appear>
@@ -191,7 +195,7 @@ export default class Presentation extends React.Component {
                     <Slide transition={["slide"]} bgColor="black">
                         <BlockQuote>
                             <Quote>WTF?</Quote>
-                            <Cite>«Че?»</Cite>
+                            <Cite>«Шо, як так?»</Cite>
                         </BlockQuote>
                     </Slide>
 
@@ -273,6 +277,21 @@ export default class Presentation extends React.Component {
                         <Image src={images.uxGif.replace("/", "")} margin="0px auto 40px" height="400px"/>
                     </Slide>
 
+                    <Slide transition={["slide"]} bgImage={images.flash.replace("/", "")} bgDarken={0.75}>
+                        <BlockQuote>
+                            <Quote>I am the faster man alive.</Quote>
+                            <Cite>«The Flash»</Cite>
+                        </BlockQuote>
+                    </Slide>
+
+                    <Slide transition={["slide"]} bgColor="black">
+                        <Image src={images.speed0.replace("/", "")} width="100%"/>
+                    </Slide>
+
+                    <Slide transition={["slide"]} bgColor="black">
+                        <Image src={images.speed1.replace("/", "")} height="500px"/>
+                    </Slide>
+
                     <Slide transition={["slide"]} bgColor="primary">
                         <Heading caps fit size={1} textColor="white">
                             NativeScript
@@ -288,6 +307,42 @@ export default class Presentation extends React.Component {
 
                     <Slide transition={["slide"]} bgColor="black">
                         <Image src={images.reactNative.replace("/", "")} height="500px"/>
+                    </Slide>
+
+                    <Slide transition={["slide"]} bgImage={images.raspberryPi.replace("/", "")} bgDarken={0.75}>
+                        <Appear fid="1">
+                            <Heading size={1} caps fit textColor="primary">
+                                Raspberry PI
+                            </Heading>
+                        </Appear>
+                        <Appear fid="2">
+                            <Heading size={1} caps fit textColor="tertiary">
+                                NODE.JS
+                            </Heading>
+                        </Appear>
+                        <Appear fid="3">
+                            <Heading size={1} caps fit textColor="primary">
+                                что за зверь ?
+                            </Heading>
+                        </Appear>
+                    </Slide>
+
+                    <Slide transition={["zoom", "fade"]} bgColor="primary">
+                        <Heading size={1} fit caps lineHeight={1}>
+                            Что нужно чтобы подружить node.js c малинкой
+                        </Heading>
+                        <CodePane
+                            lang="bash"
+                            source={`wget http://node-arm.herokuapp.com/node_latest_armhf.deb
+sudo dpkg -i node_latest_armhf.deb
+touch /home/pi/app.js
+su pi -c 'node /home/pi/app.js < /dev/null &'`}
+                            margin="20px auto"
+                        />
+                    </Slide>
+
+                    <Slide transition={["slide"]} bgColor="black">
+                        <Image src={images.gpio.replace("/", "")} height="500px"/>
                     </Slide>
 
                     <Slide transition={["slide","fade"]} bgColor="secondary" textColor="primary">
